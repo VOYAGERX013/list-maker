@@ -1,7 +1,7 @@
 class List {
     constructor(givenList) {
         this.array = givenList || [];
-        /* Done */ this.add = (...args) => {
+        this.add = (...args) => {
             if (args.length === 1){
                 this.array.push(args[0]);
             } else{
@@ -9,50 +9,50 @@ class List {
             }
         };
 
-        /* Done */ this.dumpList = (list) => {
+        this.dumpList = (list) => {
             list.map((elem) => {
                 this.array.push(elem);
             });
         };
 
-        /* Done */ this.removeLast = () => {
+        this.removeLast = () => {
             this.removeAt(this.array.length - 1);
         };
-        /* Done */ this.removeFirst = () => {
+        this.removeFirst = () => {
             this.removeAt(0);
         };
-        /* Done */ this.removeAt = (idx) => {
+        this.removeAt = (idx) => {
             this.array.splice(idx, 1);
         };
 
-        /* Done */ this.removeIndexes = (...args) => {
+        this.removeIndexes = (...args) => {
             const indices = args;
             indices.map((elem) => {
                 this.array.splice(elem, 1);
             })
         }
 
-        /* Done */ this.removeVal = (val) => {
+        this.removeVal = (val) => {
             this.array = this.array.filter((elem) => {
                 if (elem !== val) {
                     return elem;
                 }
             });
         };
-        /* Done */ this.sortAsc = () => {
+        this.sortAsc = () => {
             this.array.sort();
         };
 
-        /* Done */ this.sortDesc = () => {
+        this.sortDesc = () => {
             this.array.sort();
             this.array.reverse();
         };
 
-        /* Done */ this.empty = () => {
+        this.empty = () => {
             this.array = [];
         };
 
-        /* Done */ this.findPositions = (val) => {
+        this.findPositions = (val) => {
             let positions = [];
             this.array.map((elem, idx) => {
                 if (elem === val) {
@@ -63,11 +63,11 @@ class List {
             return positions;
         };
 
-        /* Done */ this.numOccurrences = (elem) => {
+        this.numOccurrences = (elem) => {
             return this.findPositions(elem).length;
         };
 
-        /* Done */ this.removeRepeats = () => {
+        this.removeRepeats = () => {
             this.array.map((elem) => {
                 const numOccurrences = this.numOccurrences(elem);
                 if (numOccurrences > 1) {
@@ -97,7 +97,7 @@ class List {
             });
         };
 
-        /* Done */ this.concatenate = () => {
+        this.concatenate = () => {
             let string = "";
             this.array.map((elem) => {
                 string += elem;
@@ -106,7 +106,7 @@ class List {
             return string;
         }
 
-        /* Done */ this.summate = () => {
+        this.summate = () => {
             let sum = 0;
             this.array.map((elem) => {
                 sum += Number(elem);
@@ -115,36 +115,36 @@ class List {
             return sum;
         }
 
-        /* Done */ this.average = () => {
+        this.average = () => {
             const summation = this.summate();
             return summation / this.array.length;
         }
 
-        /* Done */ this.clone = () => {
+        this.clone = () => {
             return this.array;
         }
 
-        /* Done */ this.convertToStrings = () => {
+        this.convertToStrings = () => {
             for (let i=0; i < this.array.length; i++){
                 this.array[i] = String(this.array[i]);
             }
             return this.array;
         }
 
-        /* Done */ this.convertToNumbers = () => {
+        this.convertToNumbers = () => {
             for (let i=0; i < this.array.length; i++){
                 this.array[i] = Number(this.array[i]);
             }
         }
 
-        /* Done */ this.roundAllDigits = (decimal_places) => {
+        this.roundAllDigits = (decimal_places) => {
             for (let i=0; i < this.array.length; i++){
                 this.array[i] = this.array[i].toFixed(decimal_places);
             }
             return this.array;
         }
 
-        /* Done */ this.removeFirstOccurrence = (val) => {
+        this.removeFirstOccurrence = (val) => {
             let stopFiltering = false;
             this.array = this.array.filter((elem) => {
                 if (elem !== val || stopFiltering) {
@@ -155,7 +155,7 @@ class List {
             });
         }
 
-        /* Done */ this.sortInnerList = (idx_sort) => {
+        this.sortInnerList = (idx_sort) => {
             const colData = [];
             this.array.map((elem) => {
                 colData.push(elem[idx_sort]);
