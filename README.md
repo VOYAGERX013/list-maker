@@ -103,7 +103,7 @@ Formatting list values:
 ```javascript
 const numbArr = ["1", "2", "3", "4", "5"];
 numbArr.convertToNumbers(); // Converts the type of all elements to a number
-const stringArr = numbArr.convertToString(); // Converts the type of all elements to a string
+const stringArr = numbArr.convertToStrings(); // Converts the type of all elements to a string
 const two_dec_arr = numbArr.roundAllDigits(2); // Rounds to 2 decimal places
 ```
 
