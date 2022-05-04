@@ -1,0 +1,22 @@
+{
+  "name": "list-maker",
+  "version": "1.0.0",
+  "description": "Use the list maker package to simplify your code associated with data structures such as lists. Shorten your several lines of code with simply one call!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VOYAGERX013/list-maker.git"
+  },
+  "author": "Aryaan Hegde",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VOYAGERX013/list-maker/issues"
+  },
+  "homepage": "https://github.com/VOYAGERX013/list-maker#readme",
+  "dependencies": {
+    "list-maker": "^1.0.0"
+  }
+}
