@@ -17,12 +17,15 @@ class List {
 
         this.removeLast = () => {
             this.removeAt(this.array.length - 1);
+            return this.array;
         };
         this.removeFirst = () => {
             this.removeAt(0);
+            return this.array;
         };
         this.removeAt = (idx) => {
             this.array.splice(idx, 1);
+            return this.array;
         };
 
         this.removeIndexes = (...args) => {
@@ -30,6 +33,7 @@ class List {
             indices.map((elem) => {
                 this.array.splice(elem, 1);
             })
+            return this.array;
         }
 
         this.removeVal = (val) => {
@@ -38,18 +42,22 @@ class List {
                     return elem;
                 }
             });
+            return this.array;
         };
         this.sortAsc = () => {
             this.array.sort();
+            return this.array;
         };
 
         this.sortDesc = () => {
             this.array.sort();
             this.array.reverse();
+            return this.array;
         };
 
         this.empty = () => {
             this.array = [];
+            return this.array;
         };
 
         this.findPositions = (val) => {
@@ -77,10 +85,12 @@ class List {
                     }
                 }
             });
+            return this.array;
         };
 
         this.splitPairs = () => {
             this.splitList(2);
+            return this.array;
         };
 
         this.splitList = (elem_len) => {
@@ -95,6 +105,7 @@ class List {
                     this.array.push(returnArr);
                 }
             });
+            return this.array;
         };
 
         this.concatenate = () => {
@@ -135,6 +146,7 @@ class List {
             for (let i=0; i < this.array.length; i++){
                 this.array[i] = Number(this.array[i]);
             }
+            return this.array;
         }
 
         this.roundAllDigits = (decimal_places) => {
@@ -153,6 +165,7 @@ class List {
                     stopFiltering = true;
                 }
             });
+            return this.array;
         }
 
         this.sortInnerList = (idx_sort) => {
@@ -170,6 +183,7 @@ class List {
                 }
             }
             this.array = sortedArray;
+            return this.array;
         }
     }
 }
