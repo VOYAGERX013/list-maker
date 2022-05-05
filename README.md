@@ -12,7 +12,7 @@ Install list maker with npm
   npm i list-maker
 ```
 
-    
+
 ## Documentation
 
 A new list can be made by using the following code
@@ -63,7 +63,7 @@ let genderAgeNames = new List("male", 25, "Lowry", "male", 19, "Patrick", "femal
 genderAgeNames.splitList(3)
 ```
 
-Sometimes list can contain lists inside them. To sort these lists, the sortInnerList function can be used. 
+Sometimes list can contain lists inside them. To sort these lists, the sortInnerList function can be used.
 
 Since we want to sort according to age, that is the first field in the inner list, we pass zero as a parameter (indexing starts with zero).
 
@@ -96,6 +96,8 @@ const names = ["Stuart", "Leonard", "Amy", "Bert", "Stuart"];
 names.removeFirstOccurrence("Stuart"); // The function removes the first occurrence of the name stuart: ["Leonard", "Amy", "Bert", "Stuart"]
 names.removeIndexes(2, 3); // The function removes elements in the indexes two and three: ["Leonard", "Amy"]
 names.removeVal("Leonard"); // Removes all the occurrences of the name Leonard: ["Amy"]
+const foods = ["Brisket", "Sushi", "Salmon", "Ramen", "Penne"];
+foods.removeRange(0, 2); // This function removes all elements in the range of indexes zero to two: ["Ramen", "Penne"]
 ```
 
 Formatting list values:
@@ -104,7 +106,7 @@ Formatting list values:
 const numbArr = ["1", "2", "3", "4", "5"];
 numbArr.convertToNumbers(); // Converts the type of all elements to a number
 const stringArr = numbArr.convertToStrings(); // Converts the type of all elements to a string
-const two_dec_arr = numbArr.roundAllDigits(2); // Rounds to 2 decimal places
+const two_dec_arr = numbArr.roundAllDigits(2); // Rounds all elements to 2 decimal places: [1.00, 2.00, 3.00, 4.00, 5.00]
 ```
 
 More functions:
@@ -124,7 +126,7 @@ console.log(letters_split.concatenate()); // Returns the string: HELLO WORLD
 A list can be copied by using the clone function:
 
 ```javascript
-const series = [1, 2, 3, 4, 5];
+const series = new List([1, 2, 3, 4, 5]);
 const another_series = series.clone();
 ```
 ## License
@@ -135,4 +137,3 @@ const another_series = series.clone();
 ## Authors
 
 - [@aryaanhegde](https://www.github.com/VOYAGERX013)
-
