@@ -185,6 +185,16 @@ class List {
             this.array = sortedArray;
             return this.array;
         }
+
+        this.removeRange = (initialIdx, finalIdx) => {
+            this.array = this.array.filter((elem, idx) => {
+                if (!(idx >= initialIdx && idx <= finalIdx)){
+                    return elem;
+                }
+            })
+
+            return this.array;
+        }
     }
 }
 
