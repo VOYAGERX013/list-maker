@@ -195,6 +195,30 @@ class List {
 
             return this.array;
         }
+
+        this.replaceAt = (idx, replaceVal) => {
+            this.array[idx] = replaceVal;
+            return this.array;
+        }
+
+        this.replaceFirstOccurrence = (search, replaceVal) => {
+            for (let i=0; i < this.array.length; i++){
+                if (this.array[i] === search){
+                    this.array[i] = replaceVal;
+                    return this.array;
+                }
+            }
+        }
+
+        this.replaceAll = (search, replaceVal) => {
+            for (let i=0; i < this.array.length; i++){
+                if (this.array[i] === search){
+                    this.array[i] = replaceVal;
+                }
+            }
+
+            return this.array;
+        }
     }
 }
 
