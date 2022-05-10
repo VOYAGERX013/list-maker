@@ -58,7 +58,7 @@ Splitting of a list:
 ```javascript
 let ageNames = new List([25, "Lowry", 18, "Michael", 37, "Kim", 27, "Lee"]);
 ageNames.splitPairs(); // The main list is split into sub-lists with elements having pairs of values, the age and name: [[25, "Lowry"], [18, "Michael"], [37, "Kim"], [27, "Lee"]]
-let genderAgeNames = new List("male", 25, "Lowry", "male", 19, "Patrick", "female", 40, "Amanda");
+let genderAgeNames = new List(["male", 25, "Lowry", "male", 19, "Patrick", "female", 40, "Amanda"]);
 // The list must now be split into a sub-list with three elements:
 genderAgeNames.splitList(3)
 ```
